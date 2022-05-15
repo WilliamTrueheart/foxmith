@@ -580,12 +580,12 @@ footer {
   #vpLetterBoard_Row2 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 3vw;
+    margin-top: 1%;
   }
   #vpLetterBoard_Row3 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 3vw;
+    margin-top: 1%;
   }
   #topNav {
     list-style-type: none;
