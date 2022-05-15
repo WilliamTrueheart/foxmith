@@ -1,3 +1,11 @@
+a:visited, a:link {
+  color: white;
+}
+
+a:visited:hover, a:link:hover {
+  color: aqua;
+}
+
 * {
   font-family: 'Quicksand', sans-serif;
   padding: 0;
@@ -30,30 +38,11 @@ header {
   font-size: 1rem;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: aqua;
-  cursor: pointer;
-}
-
-a:hover:link {
-  color: white;
-}
-
-a:hover:active {
-  color: white;
-}
-
-a #topNav {
+#topNav {
   list-style-type: none;
-  width: 50%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-top: 14px;
   position: absolute;
   -webkit-box-pack: end;
@@ -63,12 +52,17 @@ a #topNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5%;
+  gap: 8%;
   font-size: .8rem;
 }
 
-a .voylesPuzzleNav {
-  list-style-type: none;
+.voylesPuzzleNav {
+  text-decoration: none;
+}
+
+.voylesPuzzleNav:hover {
+  color: aqua;
+  cursor: pointer;
 }
 
 #anchorVP {
