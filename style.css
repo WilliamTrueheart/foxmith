@@ -119,12 +119,12 @@ footer {
   height: 20px;
   border: double #353d4d 7px;
   position: absolute;
-  opacity: .3;
+  opacity: .2;
 }
 
 .pageStickerCircle {
   border-radius: 300px;
-  border: double #454d62 7px;
+  border: double grey 7px;
   -webkit-animation: growCircle 5s infinite;
           animation: growCircle 5s infinite;
 }

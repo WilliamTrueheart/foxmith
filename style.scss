@@ -7,6 +7,7 @@ $greyLight: rgb(25, 30, 39);
 $greyMedium: #20232a;
 $darkIcons: rgb(53, 61, 77);
 $lightIcons: rgb(69, 77, 98);
+$extralightIcons: grey;
 
 
 a:visited, a:link {
@@ -115,12 +116,12 @@ footer {
     height:20px;
     border:double $darkIcons 7px;
     position: absolute;
-    opacity: .3;
+    opacity: .2;
 }
 
 .pageStickerCircle {
     border-radius: 300px;
-    border:double $lightIcons 7px;
+    border:double $extralightIcons 7px;
     animation:growCircle 5s infinite;
 }
 .pageStickerSquare {
