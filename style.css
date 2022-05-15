@@ -82,12 +82,6 @@ header h1 {
   color: white;
 }
 
-footer {
-  width: 100vw;
-  height: 120px;
-  background-color: #20232a;
-}
-
 #landingPage {
   width: 100%;
   margin-top: 6%;
@@ -424,7 +418,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   gap: .5rem;
-  padding: 4rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
 }
 
 #brainBendersWrapper:before {
@@ -596,6 +590,37 @@ footer {
 
 #brainBenderTile_18 {
   background-image: url("bb11.PNG");
+}
+
+footer {
+  width: 100vw;
+  height: 120px;
+  background-color: #20232a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c3c3c3;
+  cursor: text;
+}
+
+#contactEmail {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+#contactEmail:hover {
+  color: aqua;
 }
 
 @-webkit-keyframes hoverLetter {

@@ -79,11 +79,6 @@ header {
     }
 }
 
-footer {
-    width:100vw;
-    height:120px;
-    background-color: $greyMedium;
-}
 
 #landingPage {
     width:100%;
@@ -327,7 +322,7 @@ color:rgb(255, 255, 255);
     flex-direction: column;
     align-items: center;
     gap:.5rem;
-    padding: 4rem 0 4rem 0;
+    padding: 6rem 0 4rem 0;
 
 
     &:before {
@@ -464,6 +459,27 @@ color:rgb(255, 255, 255);
 }
 #brainBenderTile_18 {
     background-image: url('bb11.PNG');
+}
+
+
+footer {
+    width:100vw;
+    height:120px;
+    background-color: $greyMedium;
+    display: flex;
+    font-size: .6rem;
+    align-items: center;
+    justify-content: center;
+    color:rgb(195, 195, 195);
+    cursor:text;
+}
+
+#contactEmail {
+    width:max-content;
+    height: min-content;
+    &:hover {
+        color:aqua;
+    }
 }
 
 
