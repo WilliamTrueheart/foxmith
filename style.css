@@ -15,7 +15,7 @@ header {
   width: 100vw;
   position: fixed;
   top: 0;
-  height: 60px;
+  height: 14%;
   background-color: #20232a;
   color: white;
   padding: 10px 15vw 10px 15vw;
@@ -65,6 +65,10 @@ header {
   bottom: -34%;
 }
 
+#anchorVP:visited {
+  color: white;
+}
+
 footer {
   width: 100vw;
   height: 120px;
@@ -73,7 +77,7 @@ footer {
 
 #landingPage {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 14%;
   height: 70vh;
   background-color: #191e27;
   position: relative;
