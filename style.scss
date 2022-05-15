@@ -94,10 +94,10 @@ footer {
 
     &::after {
         content:'';
-        width:100vw;
-        height:500px;
+        width:100%;
+        height:300px;
         position: absolute;
-        bottom:-50%;
+        bottom:0%;
         background-image: url('clouds.PNG');
         background-size: cover;
         background-repeat: no-repeat;
@@ -553,6 +553,12 @@ color:rgb(255, 255, 255);
 // These are all of the media Queries
 
 @media only screen and (max-width: 500px) {
+    #landingPage {
+        &::after {
+            content:'';
+            bottom:-30%;
+        }}
+
     #voylesPuzzle {
         padding: 3rem 0 6rem 0;
     }
