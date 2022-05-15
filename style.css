@@ -59,7 +59,7 @@ header h1 {
   display: -ms-flexbox;
   display: flex;
   gap: 8%;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .voylesPuzzleNav {
