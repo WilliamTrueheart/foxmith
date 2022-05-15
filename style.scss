@@ -310,27 +310,30 @@ color:rgb(255, 255, 255);
     position: relative;
     display:flex;
     padding: 4rem 0 4rem 0;
-    overflow: hidden;
 
     &:before {
+        box-sizing: border-box;
         content:'';
-        width:60px;
+        width:40px;
         height:40px;
         position: absolute;
-        background-color: rgb(40,44,52);
+        background-color: #191e27;
+        border:solid 4px rgb(40,44,52);
         left:5%;
-        top:0;
-        border-radius: 0px 0px 200px 200px;
+        top:-20px;
+        transform: rotate(45deg);
     }
     &:after {
+        box-sizing: border-box;
         content:'';
-        width:60px;
+        width:40px;
         height:40px;
         position: absolute;
-        background-color: rgb(40,44,52);
+        background-color: #191e27;
+        border:solid 4px rgb(40,44,52);
+        transform: rotate(45deg);
         right:5%;
-        top:0;
-        border-radius: 0px 0px 200px 200px;
+        top:-20px;
     }
 }
 
@@ -340,7 +343,7 @@ color:rgb(255, 255, 255);
     justify-content: center;
     position: relative;
     color:white;
-    gap:120vw;
+    gap:0vw;
 }
 
 .brainBenderTitle_Animation_Active {
