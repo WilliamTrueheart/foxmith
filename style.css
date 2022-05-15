@@ -481,7 +481,7 @@ footer {
 }
 
 #brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3 {
-  width: 70%;
+  width: 650px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -867,6 +867,9 @@ footer {
   }
   #vpLetterCode {
     font-size: .7rem;
+  }
+  #brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3 {
+    width: 325px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -373,7 +373,7 @@ color:rgb(255, 255, 255);
 }
 
 #brainBender_Container_1,#brainBender_Container_2,#brainBender_Container_3  {
-    width:70%;
+    width:650px;
     height:max-content;
     position: relative;
     display: flex;
@@ -617,5 +617,8 @@ color:rgb(255, 255, 255);
     }
     #vpLetterCode {
         font-size: .7rem;
+    }
+    #brainBender_Container_1,#brainBender_Container_2,#brainBender_Container_3  {
+        width:325px;
     }
 }
