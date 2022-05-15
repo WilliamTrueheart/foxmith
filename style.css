@@ -98,10 +98,10 @@ footer {
 
 #landingPage::after {
   content: '';
-  width: 100%;
+  width: 100vw;
   height: 500px;
   position: absolute;
-  bottom: -37vh;
+  bottom: -50%;
   background-image: url("clouds.PNG");
   background-size: cover;
   background-repeat: no-repeat;
