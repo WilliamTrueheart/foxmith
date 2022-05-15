@@ -27,6 +27,7 @@ header {
           align-items: center;
   border-bottom: 2px solid #344260;
   z-index: 999;
+  font-size: 1rem;
 }
 
 #topNav {
@@ -42,10 +43,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   gap: 5%;
+  font-size: .8rem;
 }
 
 .voylesPuzzleNav {
-  font-size: .8rem;
   text-decoration: none;
 }
 
