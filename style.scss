@@ -8,7 +8,13 @@ $darkIcons: rgb(53, 61, 77);
 $lightIcons: rgb(69, 77, 98);
 
 
+a:visited, a:link {
+    color:white;
 
+    &:hover {
+        color:aqua;
+    }
+}
 
 * {
     font-family: 'Quicksand', sans-serif;
@@ -38,21 +44,18 @@ header {
 
 #topNav {
     list-style-type: none;
-    width:40%;
+    width:max-content;
     margin-top:14px;
     position: absolute;
     justify-content: end;
     right:16%;
     display: flex;
-    gap:5%;
-    font-size: .8rem;
+    gap:8%;
+    font-size: .9rem;
 }
 
 .voylesPuzzleNav {
     text-decoration:none;
-    &:visited {
-        color:white;
-    }
     &:hover {
         color:aqua;
         cursor:pointer;
@@ -390,11 +393,11 @@ color:rgb(255, 255, 255);
     }
     #vpLetterBoard_Row2 {
         flex-wrap:wrap;
-        margin-top:3vw;
+        margin-top:1%;
     }
     #vpLetterBoard_Row3 {
         flex-wrap:wrap;
-        margin-top:3vw;
+        margin-top:1%;
     }
     #topNav {
         list-style-type: none;
