@@ -54,7 +54,7 @@ header h1 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  right: 16%;
+  right: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
