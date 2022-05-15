@@ -99,10 +99,11 @@ footer {
 
 #landingPage::after {
   content: '';
-  width: 100%;
+  width: 100vw;
   height: 300px;
   position: absolute;
-  bottom: 0%;
+  bottom: 0px;
+  z-index: 100;
   background-image: url("clouds.PNG");
   background-size: cover;
   background-repeat: no-repeat;
