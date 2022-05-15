@@ -372,7 +372,7 @@ color:rgb(255, 255, 255);
     animation-timing-function: cubic-bezier(0.69, 1, 0.22, 1);
 }
 
-#brainBender_Container_1 {
+#brainBender_Container_1,#brainBender_Container_2,#brainBender_Container_3  {
     width:70%;
     height:max-content;
     position: relative;
@@ -383,8 +383,9 @@ color:rgb(255, 255, 255);
     padding:10px 5px 10px 5px;
     border-radius: 8px;
     gap:5px;
-
 }
+
+
 
 .brainBenderTile {
     height:100px;
@@ -394,6 +395,7 @@ color:rgb(255, 255, 255);
     position: relative;
     background-repeat: no-repeat;
     border-radius: 4px;
+    opacity: .4;
 
     &:hover {
         background-color: rgb(167, 200, 216);
@@ -445,6 +447,25 @@ color:rgb(255, 255, 255);
 #brainBenderTile_12 {
     background-image: url('bb12.PNG');
 }
+#brainBenderTile_13 {
+    background-image: url('bb13.PNG');
+}
+#brainBenderTile_14 {
+    background-image: url('bb14.PNG');
+}
+#brainBenderTile_15 {
+    background-image: url('bb15.PNG');
+}
+#brainBenderTile_16 {
+    background-image: url('bb16.PNG');
+}
+#brainBenderTile_17 {
+    background-image: url('bb10.PNG');
+}
+#brainBenderTile_18 {
+    background-image: url('bb11.PNG');
+}
+
 
 // Animations
 
@@ -468,9 +489,11 @@ color:rgb(255, 255, 255);
 
 @keyframes brainBenderTile {
     from {
+        opacity: .4;
         transform: rotate(90deg);
     }
     100% {
+        opacity: 1;
         transform: rotate(0deg);
     }
 }

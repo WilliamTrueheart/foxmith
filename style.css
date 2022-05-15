@@ -480,7 +480,7 @@ footer {
           animation-timing-function: cubic-bezier(0.69, 1, 0.22, 1);
 }
 
-#brainBender_Container_1 {
+#brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3 {
   width: 70%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -508,6 +508,7 @@ footer {
   position: relative;
   background-repeat: no-repeat;
   border-radius: 4px;
+  opacity: .4;
 }
 
 .brainBenderTile:hover {
@@ -573,6 +574,30 @@ footer {
   background-image: url("bb12.PNG");
 }
 
+#brainBenderTile_13 {
+  background-image: url("bb13.PNG");
+}
+
+#brainBenderTile_14 {
+  background-image: url("bb14.PNG");
+}
+
+#brainBenderTile_15 {
+  background-image: url("bb15.PNG");
+}
+
+#brainBenderTile_16 {
+  background-image: url("bb16.PNG");
+}
+
+#brainBenderTile_17 {
+  background-image: url("bb10.PNG");
+}
+
+#brainBenderTile_18 {
+  background-image: url("bb11.PNG");
+}
+
 @-webkit-keyframes hoverLetter {
   from {
     font-size: 1rem;
@@ -611,10 +636,12 @@ footer {
 
 @-webkit-keyframes brainBenderTile {
   from {
+    opacity: .4;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
   100% {
+    opacity: 1;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
@@ -622,10 +649,12 @@ footer {
 
 @keyframes brainBenderTile {
   from {
+    opacity: .4;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
   100% {
+    opacity: 1;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
