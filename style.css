@@ -94,6 +94,7 @@ footer {
   height: 70vh;
   background-color: #191e27;
   position: relative;
+  overflow: hidden;
 }
 
 #landingPage::after {

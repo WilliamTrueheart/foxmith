@@ -90,6 +90,7 @@ footer {
     height:70vh;
     background-color:$greyLight;
     position: relative;
+    overflow: hidden;
 
     &::after {
         content:'';
