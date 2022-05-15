@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bluelight</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="pageTitle">Foxmith</h1>
+        <ul id="topNav">
+            <a href="#anchorVP" class="voylesPuzzleNav">voyle's_puzzle</a>
+            <li class="voylesPuzzleNav">brain_benders</li>
+            <li class="voylesPuzzleNav">contact</li>
+        </ul>
+    </header>
+    <main>
+        <div id="landingPage">
+            <div id="pageStickersContainer">
+                <div id="pageSticker_1" class="pageStickerSmall pageStickerSquare"></div>
+                <div id="pageSticker_2" class="pageStickerSmall pageStickerCircle"></div>
+                <div id="pageSticker_3" class="pageStickerSmall pageStickerSquare"></div>
+                <div id="pageSticker_4" class="pageStickerSmall pageStickerCircle"></div>
+            </div>
+<!--THIS IS ANCHOR POINT FOR HREF--> <div id="anchorVP"></div>
+        </div>
+        <div id="voylesPuzzle">
+            <div id="vp_Title" class="reveal">Voyle's Puzzle</div>
+            <div id="vpLetterBoard">
+                <div id="vpLetterBoard_Row1">
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('A')">A</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('B')">B</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('C')">C</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('D')">D</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('E')">E</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('F')">F</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('G')">G</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('H')">H</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('I')">I</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR1" onclick="selectVP_('J')">J</div>
+                </div>
+                <div id="vpLetterBoard_Row2">
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('K')">K</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('L')">L</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('M')">M</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('N')">N</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('O')">O</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('P')">P</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('Q')">Q</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('R')">R</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR2" onclick="selectVP_('S')">S</div>
+                </div>
+                <div id="vpLetterBoard_Row3">
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('T')">T</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('U')">U</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('V')">V</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('W')">W</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('X')">X</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('Y')">Y</div>
+                    <div id="vpLetterA" class="vpLetter reveal vpLetterR3" onclick="selectVP_('Z')">Z</div>
+                    <div id="vpLetterCode" class="vpLetter reveal vpLetterR3" onclick="selectVP_('CODE')">CODE</div>
+                </div>
+                <div id="vpDisplayWrapper">
+                    <div id="vpDisplay_Options">
+                        <button type="button">! no save feature</button>
+                        <button type="button" onclick="returnFromVP_Display()">return</button>
+                    </div>
+                    <div id="displayImg">
+                        
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <footer>
+
+        </footer>
+    </main>
+</body>
+
+</html>

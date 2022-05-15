@@ -1,0 +1,409 @@
+
+$blueIceLight: rgb(202, 232, 240);
+$blueIceMed: rgb(189, 223, 230);
+$blueIceDark: rgb(152, 195, 206);
+$greyLight: rgb(25, 30, 39);
+$greyMedium: #20232a;
+$darkIcons: rgb(53, 61, 77);
+$lightIcons: rgb(69, 77, 98);
+
+
+
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    padding:0; margin:0;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+body {
+    width:100vw;
+}
+
+header {
+    width:100vw;
+    position: fixed;
+    top:0;
+    height:60px;
+    background-color: $greyMedium;
+    color:white;
+    padding:10px 15vw 10px 15vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(52, 66, 96);
+    z-index: 999;
+}
+
+#topNav {
+    list-style-type: none;
+    width:40%;
+    margin-top:14px;
+    position: absolute;
+    justify-content: end;
+    right:16%;
+    display: flex;
+    gap:5%;
+}
+
+.voylesPuzzleNav {
+    font-size: .8rem;
+    text-decoration:none;
+    &:visited {
+        color:white;
+    }
+    &:hover {
+        color:aqua;
+        cursor:pointer;
+    }
+}
+
+#anchorVP {
+    position: absolute;
+    width:100px;
+    height:100px;
+    bottom:-34%;
+}
+
+footer {
+    width:100vw;
+    height:120px;
+    background-color: $greyMedium;
+}
+
+#landingPage {
+    width:100%;
+    margin-top:60px;
+    height:70vh;
+    background-color:$greyLight;
+    position: relative;
+}
+
+#pageStickersContainer {
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+.pageStickerSmall {
+    width:20px;
+    height:20px;
+    border:double $darkIcons 7px;
+    position: absolute;
+    opacity: .3;
+}
+
+.pageStickerCircle {
+    border-radius: 300px;
+    border:double $lightIcons 7px;
+    animation:growCircle 5s infinite;
+}
+.pageStickerSquare {
+    animation:squareRotate 4s infinite;
+}
+
+#pageSticker_1 {
+    left:10%;
+    top:70%;
+}
+#pageSticker_2 {
+    right:10%;
+    top:20%;
+}
+#pageSticker_3 {
+    right:35%;
+    top:55%;
+    border:double rgb(45, 80, 95) 7px;
+    animation-direction: reverse;
+}
+#pageSticker_4 {
+    left:35%;
+    top:45%;
+}
+
+#vp_Title {
+font-size: 1.4rem;
+color:rgb(255, 255, 255);
+}
+
+
+
+#voylesPuzzle {
+    width:100%;
+    height:max-content;
+    background-color: rgb(40,44,52);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 4rem 0;
+    gap:2rem;
+    overflow: hidden;
+}
+
+#vpLetterBoard {
+    width:70vw;
+    height:250px;
+    background-color: rgb(40,44,52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1vw;
+    position: relative;
+}
+
+#vpLetterBoard_Row1 {
+    width:70vw;
+    height:30%;
+    display: flex;
+    gap:1vw;
+    justify-content: center;
+}
+
+#vpLetterBoard_Row2 {
+    width:65vw;
+    height:30%;
+    display: flex;
+    gap:1vw;
+    justify-content: center;
+}
+#vpLetterBoard_Row3 {
+    width:55vw;
+    height:30%;
+    display: flex;
+    gap:1vw;
+    justify-content: center;
+}
+
+.rowSlideLeft {
+    animation: slideoutRowLeft 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.rowSlideRight {
+    animation: slideoutRowRight 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#vpLetterCode {
+    animation: none;
+}
+
+.vpLetter {
+    width:6.2vw;
+    height: 6.2vw;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px rgb(169, 169, 169);
+
+    &:hover {
+        transform: scale(1.03);
+        background-color: rgb(237, 237, 237);
+        animation:hoverLetter 1s;
+        animation-fill-mode: forwards;  
+    }
+
+}
+.vpLetterR1 {
+    background-color: $blueIceDark;
+}
+.vpLetterR2 {
+    background-color: $blueIceMed;
+}
+.vpLetterR3 {
+    background-color: $blueIceLight;
+}
+
+.reveal{
+  position: relative;
+  opacity: .1;
+  transition: 2s all ease;
+}
+.reveal.active{
+  opacity: 1;
+}
+
+#vpDisplayWrapper {
+    width:300px;
+    height:100%;
+    display: none;
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.vpDisplay_active {
+    animation: vpDisplayAppear 2s;
+    animation-timing-function: cubic-bezier(0.465, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+}
+
+#vpDisplay_Options {
+    display:flex;
+    position: relative;
+    flex-wrap: wrap;
+    height: max-content;
+    width:100%;
+    flex-direction: column;
+    align-items: end;
+    z-index: 100;
+    & button {
+        width:max-content;
+        padding:.2rem .4rem .2rem .4rem;
+        color:black;
+        font-size: 1rem;
+        border-bottom-left-radius: 6px;
+        border:solid rgb(148, 148, 148) 1px;
+        opacity: .6;
+    
+        &:hover {
+            background-color:$greyLight;
+            color:white;
+            transition-duration: 1s;
+            cursor:pointer;
+            opacity: 1;
+        }
+    }
+}
+
+#displayImg {
+    position: absolute;
+    width:200px;
+    height:0px;
+    bottom:2%;
+    align-self: center;
+    animation: animateDisplayImg 2s;
+    animation-delay: .5s; 
+    animation-fill-mode: forwards;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes hoverLetter {
+    from {
+        font-size:1rem;
+    }
+    100% {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@keyframes slideoutRowLeft {
+    from {
+        position: relative;
+        right:0vw;
+    }
+    100% {
+        position: relative;
+        right:100vw;
+    }
+}
+
+@keyframes slideoutRowRight {
+    from {
+        position: relative;
+        left:0vw;
+    }
+    100% {
+        position: relative;
+        left:100vw;
+    }
+}
+
+@keyframes vpDisplayAppear {
+    from {
+        height:0%;
+    }
+    100% {
+        height:100%;
+    }
+}
+
+@keyframes animateDisplayImg {
+    from {
+        height:0%;
+    }
+    100% {
+        height:200px;
+    }
+}
+
+@keyframes squareRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    55% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes growCircle {
+    from {
+        transform: translateY(-6px);
+    }
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #voylesPuzzle {
+        padding: 3rem 0 6rem 0;
+    }
+    .vpLetter {
+        width:11.2vw;
+        height: 11.2vw;
+    }
+    #vpLetterBoard_Row1 {
+        flex-wrap:wrap;
+    }
+    #vpLetterBoard_Row2 {
+        flex-wrap:wrap;
+        margin-top:3vw;
+    }
+    #vpLetterBoard_Row3 {
+        flex-wrap:wrap;
+        margin-top:3vw;
+    }
+    #topNav {
+        list-style-type: none;
+        width:40%;
+        margin-top:14px;
+        position: absolute;
+        justify-content: end;
+        right:16%;
+        display: none;
+        gap:5%;
+    }
+    #vpLetterCode {
+        font-size: .7rem;
+    }
+}
