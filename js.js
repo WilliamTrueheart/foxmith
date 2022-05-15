@@ -1,5 +1,7 @@
 var completeMarker = '';
 
+// onScroll animation functions below
+
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -33,7 +35,22 @@ function reveal() {
 
   window.addEventListener("scroll", brainBenderTitle_Animation);
 
-  
+  function reveal_brainBenderTile() {
+    var reveals = document.querySelectorAll(".reveal_brainBenderTile");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("brainBenderAnimation");
+      } else {
+        reveals[i].classList.remove("brainBenderAnimation");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal_brainBenderTile);
+
 
   const selectVP_ = (String) => {
     let vpRow1 = document.getElementById('vpLetterBoard_Row1');

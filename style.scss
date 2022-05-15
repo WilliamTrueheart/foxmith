@@ -2,6 +2,7 @@
 $blueIceLight: rgb(202, 232, 240);
 $blueIceMed: rgb(189, 223, 230);
 $blueIceDark: rgb(152, 195, 206);
+$greyExtraLight :#282c34;
 $greyLight: rgb(25, 30, 39);
 $greyMedium: #20232a;
 $darkIcons: rgb(53, 61, 77);
@@ -309,7 +310,11 @@ color:rgb(255, 255, 255);
     height:max-content;
     position: relative;
     display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:.5rem;
     padding: 4rem 0 4rem 0;
+
 
     &:before {
         box-sizing: border-box;
@@ -344,12 +349,87 @@ color:rgb(255, 255, 255);
     position: relative;
     color:white;
     gap:0vw;
+    padding-bottom: 1.5rem;
 }
 
 .brainBenderTitle_Animation_Active {
     animation: brainBenderTitle .5s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.69, 1, 0.22, 1);
+}
+
+#brainBender_Container_1 {
+    width:70%;
+    height:max-content;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:$greyExtraLight;
+    padding:10px 5px 10px 5px;
+    border-radius: 8px;
+    gap:5px;
+
+}
+
+.brainBenderTile {
+    height:100px;
+    width:100px;
+    background-color: rgb(204, 237, 237);
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: rgb(167, 200, 216);
+        transition: 1s;
+    }
+}
+
+.brainBenderAnimation {
+    animation: brainBenderTile 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+//Below are all the brain bender displays
+
+#brainBenderTile_1 {
+    background-image: url('bb1.PNG');
+}
+#brainBenderTile_2 {
+    background-image: url('bb2.PNG');
+}
+#brainBenderTile_3 {
+    background-image: url('bb3.PNG');
+}
+#brainBenderTile_4 {
+    background-image: url('bb4.PNG');
+}
+#brainBenderTile_5 {
+    background-image: url('bb5.PNG');
+}
+#brainBenderTile_6 {
+    background-image: url('bb6.PNG');
+}
+#brainBenderTile_7 {
+    background-image: url('bb7.PNG');
+}
+#brainBenderTile_8 {
+    background-image: url('bb8.PNG');
+}
+#brainBenderTile_9 {
+    background-image: url('bb9.PNG');
+}
+#brainBenderTile_10 {
+    background-image: url('bb10.PNG');
+}
+#brainBenderTile_11 {
+    background-image: url('bb11.PNG');
+}
+#brainBenderTile_12 {
+    background-image: url('bb12.PNG');
 }
 
 // Animations
@@ -372,6 +452,14 @@ color:rgb(255, 255, 255);
     }
 }
 
+@keyframes brainBenderTile {
+    from {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 @keyframes slideoutRowLeft {
     from {
