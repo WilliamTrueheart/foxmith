@@ -96,12 +96,12 @@ footer {
     &::after {
         content:'';
         width:100vw;
-        height:300px;
+        height:400px;
         position: absolute;
-        bottom:0px;
+        bottom:-20%;
         z-index: 100;
         background-image: url('clouds.PNG');
-        background-size: cover;
+        background-size: 1240px;
         background-repeat: no-repeat;
     }
 }
