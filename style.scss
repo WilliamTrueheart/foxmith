@@ -90,6 +90,17 @@ footer {
     height:70vh;
     background-color:$greyLight;
     position: relative;
+
+    &::after {
+        content:'';
+        width:100%;
+        height:500px;
+        position: absolute;
+        bottom:-37vh;
+        background-image: url('clouds.PNG');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 #pageStickersContainer {
@@ -117,7 +128,7 @@ footer {
 
 #pageSticker_1 {
     left:10%;
-    top:70%;
+    top:50%;
 }
 #pageSticker_2 {
     right:10%;
@@ -131,7 +142,7 @@ footer {
 }
 #pageSticker_4 {
     left:35%;
-    top:45%;
+    top:30%;
 }
 
 #vp_Title {
