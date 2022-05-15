@@ -98,10 +98,10 @@ footer {
         width:100vw;
         height:400px;
         position: absolute;
-        bottom:-20%;
+        bottom:-5%;
         z-index: 100;
         background-image: url('clouds.PNG');
-        background-size: 1240px;
+        background-size: 1440px;
         background-repeat: no-repeat;
     }
 }
@@ -558,7 +558,6 @@ color:rgb(255, 255, 255);
     #landingPage {
         &::after {
             content:'';
-            bottom:-25%;
         }}
 
     #voylesPuzzle {
