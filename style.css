@@ -1,600 +1,913 @@
-* {
-  font-family: 'Quicksand', sans-serif;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-weight: 100;
-}
-
 body {
-  width: 100vw;
+    background-color: rgb(0, 0, 0);
+    margin:0; padding:0;
+    font-size: 18px;
+    animation-duration: 3s;
+    animation-name: easein;
 }
 
-header {
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  height: 14%;
-  background-color: #20232a;
-  color: white;
-  padding: 10px 15vw 10px 15vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 2px solid #344260;
-  z-index: 999;
-  font-size: 1rem;
+/* The anchors are used for GitHub Link on the Contact Me tile */
+
+a, a:visited{
+    color: white;
 }
 
-#topNav {
-  list-style-type: none;
-  width: 40%;
-  margin-top: 14px;
-  position: absolute;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  right: 16%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 5%;
-  font-size: .8rem;
+a:hover {
+    color:rgb(18, 174, 174);
 }
 
-.voylesPuzzleNav {
-  text-decoration: none;
-}
+/* Main Wrapper is displayed behind Tile Board */
 
-.voylesPuzzleNav:visited {
-  color: white;
-}
-
-.voylesPuzzleNav:hover {
-  color: aqua;
-  cursor: pointer;
-}
-
-#anchorVP {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  bottom: -34%;
-}
-
-#anchorVP:visited {
-  color: white;
-}
-
-footer {
-  width: 100vw;
-  height: 120px;
-  background-color: #20232a;
-}
-
-#landingPage {
-  width: 100%;
-  margin-top: 6%;
-  height: 70vh;
-  background-color: #191e27;
-  position: relative;
-}
-
-#pageStickersContainer {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.pageStickerSmall {
-  width: 20px;
-  height: 20px;
-  border: double #353d4d 7px;
-  position: absolute;
-  opacity: .3;
-}
-
-.pageStickerCircle {
-  border-radius: 300px;
-  border: double #454d62 7px;
-  -webkit-animation: growCircle 5s infinite;
-          animation: growCircle 5s infinite;
-}
-
-.pageStickerSquare {
-  -webkit-animation: squareRotate 4s infinite;
-          animation: squareRotate 4s infinite;
-}
-
-#pageSticker_1 {
-  left: 10%;
-  top: 70%;
-}
-
-#pageSticker_2 {
-  right: 10%;
-  top: 20%;
-}
-
-#pageSticker_3 {
-  right: 35%;
-  top: 55%;
-  border: double #2d505f 7px;
-  animation-direction: reverse;
-}
-
-#pageSticker_4 {
-  left: 35%;
-  top: 45%;
-}
-
-#vp_Title {
-  font-size: 1.4rem;
-  color: white;
-}
-
-#voylesPuzzle {
-  width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: #282c34;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 4rem 0 4rem 0;
-  gap: 2rem;
-  overflow: hidden;
-}
-
-#vpLetterBoard {
-  width: 70vw;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: #282c34;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1vw;
-  position: relative;
-}
-
-#vpLetterBoard_Row1 {
-  width: 70vw;
-  height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#vpLetterBoard_Row2 {
-  width: 65vw;
-  height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#vpLetterBoard_Row3 {
-  width: 55vw;
-  height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.rowSlideLeft {
-  -webkit-animation: slideoutRowLeft 2s;
-          animation: slideoutRowLeft 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.rowSlideRight {
-  -webkit-animation: slideoutRowRight 2s;
-          animation: slideoutRowRight 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-          animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#vpLetterCode {
-  -webkit-animation: none;
-          animation: none;
-}
-
-.vpLetter {
-  width: 6.2vw;
-  height: 6.2vw;
-  background-color: white;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 2px 1px darkgray;
-          box-shadow: 0px 0px 2px 1px darkgray;
-}
-
-.vpLetter:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  background-color: #ededed;
-  -webkit-animation: hoverLetter 1s;
-          animation: hoverLetter 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.vpLetterR1 {
-  background-color: #98c3ce;
-}
-
-.vpLetterR2 {
-  background-color: #bddfe6;
-}
-
-.vpLetterR3 {
-  background-color: #cae8f0;
-}
-
-.reveal {
-  position: relative;
-  opacity: .1;
-  -webkit-transition: 2s all ease;
-  transition: 2s all ease;
-}
-
-.reveal.active {
-  opacity: 1;
-}
-
-#vpDisplayWrapper {
-  width: 300px;
-  height: 100%;
-  display: none;
-  background-color: #eeeeee;
-  position: absolute;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.vpDisplay_active {
-  -webkit-animation: vpDisplayAppear 2s;
-          animation: vpDisplayAppear 2s;
-  -webkit-animation-timing-function: cubic-bezier(0.465, 0.84, 0.44, 1);
-          animation-timing-function: cubic-bezier(0.465, 0.84, 0.44, 1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-#vpDisplay_Options {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  z-index: 100;
-}
-
-#vpDisplay_Options button {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: .2rem .4rem .2rem .4rem;
-  color: black;
-  font-size: 1rem;
-  border-bottom-left-radius: 6px;
-  border: solid #949494 1px;
-  opacity: .6;
-}
-
-#vpDisplay_Options button:hover {
-  background-color: #191e27;
-  color: white;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  cursor: pointer;
-  opacity: 1;
-}
-
-#displayImg {
-  position: absolute;
-  width: 200px;
-  height: 0px;
-  bottom: 2%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-animation: animateDisplayImg 2s;
-          animation: animateDisplayImg 2s;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-@-webkit-keyframes hoverLetter {
-  from {
-    font-size: 1rem;
-  }
-  100% {
-    font-size: 1.5rem;
-  }
-}
-
-@keyframes hoverLetter {
-  from {
-    font-size: 1rem;
-  }
-  100% {
-    font-size: 1.5rem;
-  }
-}
-
-@-webkit-keyframes slideoutRowLeft {
-  from {
+#mainWrapper {
+    background-image: linear-gradient(to top, black,rgb(27, 27, 27) 100%);
+    width:100vw; height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin:0; 
     position: relative;
-    right: 0vw;
-  }
-  100% {
-    position: relative;
-    right: 100vw;
-  }
 }
 
-@keyframes slideoutRowLeft {
-  from {
-    position: relative;
-    right: 0vw;
-  }
-  100% {
-    position: relative;
-    right: 100vw;
-  }
+/* Tile Board Wrapper houses all 8 tiles */
+
+#tileBoardWrapper {
+    width:70vw; height:35vw;
+    display: flex;
+    box-shadow: 0px 0px 8px 3px rgb(0, 0, 0);
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding:0;
+    animation-duration: 5s;
+    animation-name: glow;
 }
 
-@-webkit-keyframes slideoutRowRight {
-  from {
-    position: relative;
-    left: 0vw;
-  }
-  100% {
-    position: relative;
-    left: 100vw;
-  }
+.tiles {
+    width:25%; height:50%;
+    background-size: contain;
+    cursor: pointer;
 }
-
-@keyframes slideoutRowRight {
-  from {
-    position: relative;
-    left: 0vw;
-  }
-  100% {
-    position: relative;
-    left: 100vw;
-  }
+.tiles:hover {
+    transform: scale(1.03);
+    transition: .2s;
+    z-index: 100;
+    box-shadow: rgb(68, 68, 68) 0px 0px 6px 2px;
 }
+#tileProfilePicture:hover {transform: scale(1);cursor:default;}
 
-@-webkit-keyframes vpDisplayAppear {
-  from {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@keyframes vpDisplayAppear {
-  from {
-    height: 0%;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-@-webkit-keyframes animateDisplayImg {
-  from {
-    height: 0%;
-  }
-  100% {
-    height: 200px;
-  }
-}
-
-@keyframes animateDisplayImg {
-  from {
-    height: 0%;
-  }
-  100% {
-    height: 200px;
-  }
-}
-
-@-webkit-keyframes squareRotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  55% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes squareRotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  55% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes growCircle {
-  from {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes growCircle {
-  from {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
-  }
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  50% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #voylesPuzzle {
-    padding: 3rem 0 6rem 0;
-  }
-  .vpLetter {
-    width: 11.2vw;
-    height: 11.2vw;
-  }
-  #vpLetterBoard_Row1 {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #vpLetterBoard_Row2 {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: 3vw;
-  }
-  #vpLetterBoard_Row3 {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: 3vw;
-  }
-  #topNav {
-    list-style-type: none;
-    width: 40%;
-    margin-top: 14px;
+#returnToTileBoard_BTN {
     position: absolute;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    right: 16%;
-    display: none;
-    gap: 5%;
-  }
-  #vpLetterCode {
-    font-size: .7rem;
-  }
+    left:6.5%; top:20px;
+    width:50px; height: 30px;
+    background-color: rgba(235, 235, 235, 0.608);
+    border-radius: 6px;
+    border:0px;
+    color:rgb(0, 0, 0);
+    display:none;
+    padding-bottom:4px;
+    box-sizing: border-box;
+    align-items: center; justify-content: center;
 }
-/*# sourceMappingURL=style.css.map */
+#returnToTileBoard_BTN:hover {cursor:pointer;color:rgb(0, 0, 0);background-color: rgb(255, 255, 255); }
+/*Below are all the images for the main Tiles*/
+
+#tileProfilePicture {
+    box-shadow: rgb(68, 68, 68) 0px 0px 0px 0px;
+    border-radius: 8px 0px 0px 0px;
+    background-image: url('profileImage.PNG');
+    background-size: contain;
+    position: relative;
+    animation-duration: 1.2s;
+    animation-name: down;
+}
+
+#aboutMe {
+    background-image: url("aboutMe.PNG");
+    position: relative;
+    animation-duration: 1s;
+    animation-name: down;
+}
+#aboutMe:hover {
+    background-image: url("aboutMeHover.PNG");
+}
+
+#experience {
+    background-image: url("experience.PNG");
+    position: relative;
+    animation-duration: 1s;
+    animation-name: up;
+}
+#portfolio {
+    background-image: url("portfolio.PNG");
+    border-top-right-radius: 8px;
+    position: relative;
+    animation-duration: 1.2s;
+    animation-name: up;
+}
+#skills {
+    background-image: url("skills.PNG");
+    border-bottom-left-radius: 8px;
+    position: relative;
+    animation-duration: 1.2s;
+    animation-name: down;
+}
+
+#interests {
+    background-image: url("favorites.PNG");
+    position: relative;
+    animation-duration: 1s;
+    animation-name: down;
+}
+#education {
+    background-image: url("credentials.PNG");
+    position: relative;
+    animation-duration: 1s;
+    animation-name: up;
+}
+#contact {
+    background-image: url("contact.PNG");
+    border-bottom-right-radius: 8px;
+    position: relative;
+    animation-duration: 1.2s;
+    animation-name: up;
+}
+/* This is the display page once a tile is selected */
+
+
+.displayUI {
+    width:100%; height:100vh;
+    display: none;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(to right, rgb(34, 34, 36), #262627 50%);
+    border-radius: 0px;
+    justify-content: center; align-items: center;
+    animation-duration: 2s;
+    animation-name: easein;
+}
+
+/* Tile is a child of displayUI */
+
+.displayUITile {
+    width: 90%; height: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background: rgb(33,33,33);
+    background: linear-gradient(140deg, rgba(33,33,33,1) 0%, rgba(61,61,61,1) 100%);
+}
+
+
+/* Below is the display for ABOUT ME */
+
+#display_AboutMe, #display_Skills, #display_Contact  {
+    background-image: url("UIBackground1.PNG");
+    background-size: cover;
+}
+
+
+#display_Experience, #display_Interests  {
+    background-image: url("UIBackground2.PNG");
+    background-size: cover;
+}
+
+#display_Portfolio, #display_Education  {
+    background-image: url("UIBackground3.PNG");
+    background-size: cover;
+}
+
+
+
+.uI_Title {
+    font-size: 1.5em;
+    color:white; 
+    position: absolute;
+    top:20vh;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(22, 21, 21, 0.308);
+    box-shadow: white 0px 0px 4px .1px;
+    border-radius: 4px;
+    animation-duration: 2s;
+    animation-name: easein;
+}
+
+
+
+
+.uI_Title:hover {
+ cursor:default; 
+
+}
+
+.uI_Para {
+    color:white; 
+    position: absolute;
+    top:38vh; 
+    border-radius: 4px;
+     animation-duration: 2s;
+    animation-name: easein;
+}
+
+
+#uI_Para_Experience {
+    position: absolute;
+    line-height: 22px;
+    width:75%;
+    padding: 20px;
+    background-color: rgba(22, 21, 21, 0.308);
+}
+
+
+
+/* Below are the Paragraphs for the 8 Tile UI's */
+
+#uI_Para_AboutMe {
+    color:rgb(255, 255, 255); 
+    position: absolute;
+    width:75%;
+    padding: 20px;
+    line-height: 25px;
+    background-color: rgba(22, 21, 21, 0.308);
+}
+
+#uI_Para_Favorites {
+    width:75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+    background-color: rgba(22, 21, 21, 0.308);
+    padding: 20px;
+    position: absolute;
+    line-height: 22px;
+}
+
+
+
+#uI_Para_Skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:3%;
+    width:65%;
+    height: min-content;
+    background-color: rgba(22, 21, 21, 0.308);
+    padding: 20px;
+}
+
+#uI_Para_Contact {
+background-color: rgba(22, 21, 21, 0.308);
+padding: 20px 20px 20px 20px;
+}
+
+.skills_Logo {
+    width:10%; height:max-content;
+    padding:0%;
+    top:20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: 1s;
+}
+
+.skills_Logo:hover {
+    transform: scale(1.1);
+}
+
+.skillName {
+    font-size: .9rem;
+    position: relative;
+    bottom:0px;
+
+}
+.skillLevel {
+    font-size: .7rem;
+    position: relative;
+    bottom:28px;
+}
+
+.skillLogoImage {
+    width:100%;
+}
+.beginner {color:rgb(248, 143, 143)}
+.comfortable {color:rgb(218, 218, 90)}
+.confident {color:rgb(96, 227, 107);}
+
+
+
+/* Below is the Housing for the PORTFOLIO Tile */
+
+
+
+
+#portfolio_Items_Wrapper {
+    position: absolute;
+    width:300px; height:300px;
+    background-image: linear-gradient(to right, rgb(122, 137, 174), rgb(76, 83, 140) 90%);
+    top:38%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    animation-duration: 4s;
+    animation-name: easein;
+}
+
+
+.portfolio_Item {
+    width:99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 70%;
+    height:47px;
+    font-size: .9rem;
+    background-color:rgb(255, 255, 255);
+}
+
+.portfolio_Item:hover {
+    color:black;
+    opacity: 90%;
+    cursor:pointer;
+    box-sizing: border-box;
+    border-bottom: #1ddde8 4px solid;
+    transform: scale(1.01);
+    transform: translateY(-2px);
+    transition: .5s;
+    background-image:linear-gradient(90deg, rgba(255, 255, 255, 0.565), rgba(255, 255, 255, 0.73) 20%);
+}
+
+
+.portfolio_display {
+    position: absolute;
+    height:300px;
+    width:99%;
+    display:none;
+    justify-content: center;
+    background-color:rgb(255, 255, 255);
+}
+
+.porfolio_Display_Title {
+    font-size: .9rem;
+    width:70%;
+    left:10px;
+    position: absolute;
+}
+
+
+.portfolio_Desc {
+    color: #0a0433;
+    position: absolute;
+    top:50px;
+    padding: 0px 12px 0px 12px;
+    font-size: .7rem;
+}
+
+
+#foxmithLink {
+    position: absolute;
+    top:120px;
+    display:none;
+    color:black;
+    font-size: .8rem;
+}
+#lC_Link {
+    position: absolute;
+    top:120px;
+    color:black;
+    display:none;
+    font-size: .8rem;
+}
+
+#homebase_Link {
+    position: absolute;
+    top:120px;
+    color:black;
+    display:none;
+    font-size: .8rem;
+}
+#invite_Link {
+    position: absolute;
+    top:120px;
+    color:black;
+    display:none;
+    font-size: .8rem;
+}
+
+#portfolio_Link {
+    position: absolute;
+    top:120px;
+    color:black;
+    display:none;
+    font-size: .8rem;
+}
+
+#rwb_Link {
+    position: absolute;
+    top:120px;
+    color:black;
+    display:none;
+    font-size: .8rem;
+}
+
+
+
+#foxmithLink:hover, #lC_Link:hover {
+    color:rgb(29, 76, 171);
+}
+
+#pItem3Form {
+margin-top:15px;
+padding-bottom: 15px;
+}
+
+#item3Sub{
+    height:20px; width:60px;
+    border-radius: 6px;
+    background-color: rgb(223, 188, 188);
+}
+.portItem3Input {
+    height:20px; width:100px;
+}
+
+
+#returnFromPortfolioItem {
+    position: absolute;
+    right:10px; top:10px;
+    background-color: rgb(0, 0, 0);
+    width:40px; height:20px;
+    border-radius: 6px;
+    color:white;
+    font-size: .6rem;
+    display: flex;
+    cursor:pointer;
+    align-items: center; justify-content: center;
+}
+
+#returnFromPortfolioItem:hover {
+    background-color: #0a0433;
+}
+
+
+#certSelectors {
+    width:40%;
+    position: relative;
+    color:white;
+    font-size: .8rem;
+    display: flex;
+    top:45%;
+    gap:4%;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.certItems {
+    font-size: 1rem;
+}
+
+.grey {
+    color:rgb(201, 201, 201);
+    animation-duration: 4s;
+    animation-name: highlightwordsgrey;
+}
+
+.green {
+    color:rgb(131, 243, 131);
+    animation-duration: 4s;
+    animation-name: highlightwordsgreen;
+}
+
+.blue {
+    color:rgb(131, 170, 243);
+    animation-duration: 4s;
+    animation-name: highlightwordsblue;
+}
+
+.red {
+    color:rgb(247, 169, 169);
+    animation-duration: 4s;
+    animation-name: highlightwordsred;
+}
+
+.teal {
+    color:rgb(131, 221, 243);
+    animation-duration: 4s;
+    animation-name: highlightwordsteal;
+}
+
+.jsFont {
+    color:yellow;
+    background-color: black;
+    font-size: .8rem;
+    padding: 2px 4px 2px 4px;
+    margin: 0 5px 0 5px;
+    border-radius: 4px;
+    border:solid yellow 1px;
+    box-sizing: border-box;
+}
+.htmlFont {
+    color:rgb(253, 111, 9);
+    background-color: rgb(0, 0, 0);
+    font-size: .8rem;
+    padding: 2px 4px 2px 4px;
+    margin: 0 5px 0 5px;
+    border-radius: 4px;
+    border:solid rgb(253, 111, 9) 1px;
+    box-sizing: border-box;
+}
+.cssFont {
+    color:rgb(147, 165, 255);
+    background-color: black;
+    font-size: .8rem;
+    padding: 2px 4px 2px 4px;
+    margin: 0 5px 0 5px;
+    border-radius: 4px;
+    border:solid rgb(134, 150, 252) 1px;
+    box-sizing: border-box;
+}
+.scssFont {
+    color:rgb(245, 105, 219);
+    background-color: black;
+    font-size: .8rem;
+    padding: 2px 4px 2px 4px;
+    margin: 0 5px 0 5px;
+    border-radius: 4px;
+    border:solid rgb(206, 22, 173) 1px;
+    box-sizing: border-box;
+}
+
+
+
+.reactFont {
+    color:rgb(83, 235, 255);
+    background-color: black;
+    font-size: .8rem;
+    padding: 2px 4px 2px 4px;
+    margin: 0 5px 0 5px;
+    border-radius: 4px;
+    border:solid rgb(74, 253, 253) 1px;
+    box-sizing: border-box;
+}
+
+hr {background-color: black;}
+
+@keyframes easein {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+@keyframes highlightwordsblue {
+    from {
+      color:white;
+    }
+    60% {
+        color:rgb(255, 255, 255);
+      }
+    100% {
+      color:rgb(131, 170, 243)
+    }
+    to {
+      opacity: 100%;
+    }
+}
+@keyframes highlightwordsgrey {
+    from {
+      color:white;
+    }
+    60% {
+        color:rgb(255, 255, 255);
+      }
+    100% {
+        color:rgb(201, 201, 201);
+    }
+    to {
+      opacity: 100%;
+    }
+}
+@keyframes highlightwordsgreen {
+    from {
+      color:white;
+    }
+    60% {
+        color:rgb(255, 255, 255);
+    }
+    100% {
+        color:rgb(131, 243, 131);
+    }
+}
+@keyframes highlightwordsred {
+    from {
+      color:white;
+    }
+    60% {
+        color:rgb(255, 255, 255);
+      }
+    100% {
+        color:rgb(247, 169, 169);
+    }
+    to {
+      opacity: 100%;
+    }
+}
+
+@keyframes highlightwordsteal {
+    from {
+      color:white;
+    }
+    60%{
+        color:rgb(255, 255, 255);
+      }
+    100% {
+        color:rgb(131, 221, 243);
+    }
+    to {
+      opacity: 100%;
+    }
+}
+
+@keyframes down {
+    from {
+      bottom:100%;
+    }
+    60% {
+        bottom:-5%;
+    }
+    100% {
+        bottom:0%;
+    }
+}
+
+@keyframes left {
+    from {
+      right:100%;
+    }
+    60% {
+       right:-5%;
+    }
+    100% {
+       right:0%;
+    }
+}
+@keyframes right {
+    from {
+      left:100%;
+    }
+    60% {
+      left:-5%;
+    }
+    100% {
+      left:0%;
+    }
+}
+@keyframes up {
+    from {
+      top:100%;
+    }
+    60% {
+       top:-5%;
+    }
+    100% {
+       top:0%;
+    }
+}
+@keyframes glow {
+    from {
+      box-shadow: rgba(49, 152, 187, 0) 0px 0px 4px 1px;
+    }
+    28% {
+        box-shadow: rgba(49, 152, 187, 0) 0px 0px 4px 1px;
+      }
+    36% {
+        box-shadow: rgba(20, 192, 69, 0.567) 0px 0px 10px 1px;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    .tiles {
+        width:50%; height:25%;
+    }
+    #tileBoardWrapper {
+        display:flex; flex-direction: row;
+        flex-wrap: wrap;
+        width:45vh;height:90vh;
+    }
+   
+
+    #uI_Para_Favorites {
+        font-size: .8rem;
+        line-height: 16px;
+
+    }
+
+    #uI_Para_AboutMe {
+        line-height: 22px;
+        font-size: .8rem;
+    }
+
+    #uI_Para_Experience {
+        font-size: .7em;
+        line-height: normal;
+    }
+
+    .skills_Logo {
+        width:20%; height:max-content;
+        padding:1%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .skillName {
+        font-size: .6rem;
+        position: relative;
+        bottom:5px;
+    }
+    .skillLevel {
+        font-size: .5rem;
+        position: relative;
+        bottom:24px;
+    }
+    #tileProfilePicture {
+        animation-duration: 1.2s;
+        animation-name: right;
+    }
+    #aboutMe {
+        border-top-right-radius: 8px;
+        animation-duration: 1.2s;
+        animation-name: right;
+    }
+    #experience {
+        animation-duration: 1s;
+        animation-name: right;
+    }
+    #portfolio {
+        animation-duration: 1s;
+        animation-name: right;
+    }
+    #skills {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        animation-duration: 1s;
+        animation-name: left;
+    }
+    #interests {
+        animation-duration: 1s;
+        animation-name: left;
+    }
+    #education {
+        border-bottom-left-radius: 8px;
+        animation-duration: 1.2s;
+        animation-name: left;
+    }
+    #contact {
+        animation-duration: 1.2s;
+        animation-name: left;
+    }
+    #certSelectors {
+        width:70%;}
+
+}
+
+
+
+@media screen and (max-width: 820px) and (max-height: 430px) {
+    #tileBoardWrapper {
+        width:80vw; height:40vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tiles {
+        width:25%; height:50%;
+        background-size: contain;
+    }
+    #tileProfilePicture {
+        border-top-left-radius: 8px;
+    }
+    #portfolio {
+        border-top-right-radius: 8px;
+    }
+    #skills {
+        border-bottom-left-radius: 8px;
+    }
+    #contact {
+        border-bottom-right-radius: 8px;
+    }
+    #aboutMe {
+        border-top-right-radius: 0px;
+    } 
+    #portfolio {
+        border-top-right-radius: 8px;
+    }
+    #education {
+        border-bottom-left-radius: 0px;
+    }
+
+
+    .portfolio_Apps {
+        height:150px; width:150px;
+ 
+    }
+
+    .skills_Logo {
+        width:10%; height:max-content;
+        padding:0%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .skillName {
+        font-size: .5rem;
+        position: relative;
+        bottom:5px;
+    }
+    .skillLevel {
+        font-size: .4rem;
+        position: relative;
+        bottom:20px;
+    }
+    #uI_Para_AboutMe {
+        line-height:12px;
+        font-size:.6rem;
+    }
+    #uI_Para_Experience {
+        line-height:10px;
+        font-size:.6rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 450px) {
+    .uI_Para {
+        top:29%;
+    }
+    .uI_Title {
+        top:15%;
+    }
+    
+
+    #certWrapper {
+        margin-top:4vh;
+    }
+    .portfolio_Apps {
+        height:180px; width:180px;
+    }
+
+  #portfolio_Items_Wrapper {
+    top:34%;
+  }
+  
+
+    #uI_Para_Skills {
+        gap:5%;
+    }
+
+    #uI_Para_Favorites {
+        font-size: .8rem;
+        line-height: 16px;
+
+    }
+
+    #uI_Para_AboutMe {
+        line-height: 22px;
+        font-size: .8rem;
+    }
+
+    #uI_Para_Experience {
+        font-size: .7em;
+        line-height: normal;
+    }
+    #returnToTileBoard_BTN {
+        left:8%; 
+    }
+    #uI_Para_Contact {
+        font-size: .7rem;
+        line-height: normal;
+    }
+
+    #showButton1 {
+        font-size: .6rem;
+    }
+
+    .skills_Logo {
+        width:28%;
+    }
+    .portfolio_Desc {
+
+        font-size: .5rem;
+    }
+
+}
