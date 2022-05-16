@@ -171,7 +171,7 @@ header h1 {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background-color: #282c34;
+  background: #282c34;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,7 +430,9 @@ header h1 {
   height: -moz-max-content;
   height: max-content;
   position: relative;
-  background-color: #191e27;
+  background: #191e27;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #191e27), to(#222834));
+  background: linear-gradient(180deg, #191e27 5%, #222834 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,6 +604,7 @@ footer {
           justify-content: center;
   color: #c3c3c3;
   cursor: text;
+  border-top: 2px solid #344260;
 }
 
 #contactEmail {
