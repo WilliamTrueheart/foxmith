@@ -197,7 +197,7 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 4rem 0 6rem 0;
+  padding: 4rem 0 14rem 0;
   gap: 2rem;
   overflow: hidden;
 }
@@ -422,6 +422,18 @@ header h1 {
   background-repeat: no-repeat;
 }
 
+#transitionRounded {
+  width: 100vw;
+  height: 180px;
+  position: absolute;
+  top: -150px;
+  background-image: url("transition.jpg");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 #brainBendersWrapper {
   width: 100%;
   height: -webkit-max-content;
@@ -440,20 +452,21 @@ header h1 {
       -ms-flex-align: center;
           align-items: center;
   gap: .5rem;
-  padding: 6rem 0 6rem 0;
+  padding: 4rem 0 6rem 0;
 }
 
 #brainBendersWrapper:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   background-color: #191e27;
   border: solid 4px #282c34;
-  left: 5%;
-  top: -20px;
+  left: 10%;
+  top: 50%;
+  z-index: 10;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -462,15 +475,16 @@ header h1 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   background-color: #191e27;
   border: solid 4px #282c34;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  right: 5%;
-  top: -20px;
+  z-index: 10;
+  right: 10%;
+  top: 50%;
 }
 
 #brainBenderTitle {
