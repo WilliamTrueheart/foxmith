@@ -76,8 +76,8 @@ header h1 {
   margin-top: 6%;
   height: 70vh;
   background: #191e27;
-  background: -webkit-gradient(linear, left top, left bottom, from(#191e27), color-stop(50%, #1f2530));
-  background: linear-gradient(180deg, #191e27 0%, #1f2530 50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#191e27), color-stop(50%, #1f2530), color-stop(50%, #1f2530), to(#2d3646));
+  background: linear-gradient(180deg, #191e27 0%, #1f2530 50%, #1f2530 50%, #2d3646 100%);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -905,6 +905,24 @@ footer {
 @media only screen and (max-width: 500px) {
   #landingPage::after {
     content: '';
+  }
+  #pageSticker_1 {
+    left: 10%;
+    top: 50%;
+  }
+  #pageSticker_2 {
+    right: 15%;
+    top: 20%;
+  }
+  #pageSticker_3 {
+    right: 25%;
+    top: 70%;
+    border: double #2d505f 7px;
+    animation-direction: reverse;
+  }
+  #pageSticker_4 {
+    left: 30%;
+    top: 20%;
   }
   #voylesPuzzle {
     padding: 3rem 0 6rem 0;

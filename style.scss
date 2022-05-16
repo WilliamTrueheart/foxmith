@@ -76,7 +76,8 @@ header {
     margin-top:6%;
     height:70vh;
     background: rgb(25,30,39);
-    background: linear-gradient(180deg, rgba(25,30,39,1) 0%, rgba(31,37,48,1) 50%);
+    background: linear-gradient(180deg, rgba(25,30,39,1) 0%, rgba(31,37,48,1) 50%,
+    rgba(31,37,48,1) 50%,rgb(45, 54, 70) 100%);
     position: relative;
     display: flex;
     justify-content: center;
@@ -617,7 +618,27 @@ footer {
     #landingPage {
         &::after {
             content:'';
-        }}
+        }
+    }
+
+    #pageSticker_1 {
+        left:10%;
+        top:50%;
+    }
+    #pageSticker_2 {
+        right:15%;
+        top:20%;
+    }
+    #pageSticker_3 {
+        right:25%;
+        top:70%;
+        border:double rgb(45, 80, 95) 7px;
+        animation-direction: reverse;
+    }
+    #pageSticker_4 {
+        left:30%;
+        top:20%;
+    }
 
     #voylesPuzzle {
         padding: 3rem 0 6rem 0;
