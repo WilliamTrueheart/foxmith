@@ -455,38 +455,6 @@ header h1 {
   padding: 4rem 0 6rem 0;
 }
 
-#brainBendersWrapper:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  content: '';
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background-color: #191e27;
-  border: solid 4px #282c34;
-  left: 10%;
-  top: 50%;
-  z-index: 10;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-#brainBendersWrapper:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  content: '';
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background-color: #191e27;
-  border: solid 4px #282c34;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  z-index: 10;
-  right: 10%;
-  top: 50%;
-}
-
 #brainBenderTitle {
   width: 100%;
   display: -webkit-box;

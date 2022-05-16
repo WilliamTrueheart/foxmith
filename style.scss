@@ -352,34 +352,6 @@ color:rgb(255, 255, 255);
     align-items: center;
     gap:.5rem;
     padding: 4rem 0 6rem 0;
-
-
-    &:before {
-        box-sizing: border-box;
-        content:'';
-        width:30px;
-        height:30px;
-        position: absolute;
-        background-color: #191e27;
-        border:solid 4px rgb(40,44,52);
-        left:10%;
-        top:50%;
-        z-index: 10;
-        transform: rotate(45deg);
-    }
-    &:after {
-        box-sizing: border-box;
-        content:'';
-        width:30px;
-        height:30px;
-        position: absolute;
-        background-color: #191e27;
-        border:solid 4px rgb(40,44,52);
-        transform: rotate(45deg);
-        z-index: 10;
-        right:10%;
-        top:50%;
-    }
 }
 
 #brainBenderTitle {
