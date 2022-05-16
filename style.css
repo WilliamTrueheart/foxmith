@@ -71,17 +71,6 @@ header h1 {
   cursor: pointer;
 }
 
-#anchorVP {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  bottom: -34%;
-}
-
-#anchorVP:visited {
-  color: white;
-}
-
 #landingPage {
   width: 100%;
   margin-top: 6%;
@@ -300,6 +289,7 @@ header h1 {
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 2px 1px darkgray;
           box-shadow: 0px 0px 2px 1px darkgray;
+  z-index: 40;
 }
 
 .vpLetter:hover {
