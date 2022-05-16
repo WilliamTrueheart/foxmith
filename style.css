@@ -640,6 +640,8 @@ footer {
 
 @-webkit-keyframes moonglow {
   from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: .5;
     -webkit-box-shadow: white 0px 0px 8px 2px;
             box-shadow: white 0px 0px 8px 2px;
@@ -650,6 +652,8 @@ footer {
             box-shadow: white 0px 0px 16px 2px;
   }
   50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     opacity: .5;
     -webkit-box-shadow: white 0px 0px 10px 2px;
             box-shadow: white 0px 0px 10px 2px;
@@ -660,6 +664,8 @@ footer {
             box-shadow: white 0px 0px 20px 2px;
   }
   100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: .5;
     -webkit-box-shadow: white 0px 0px 8px 2px;
             box-shadow: white 0px 0px 8px 2px;
@@ -668,6 +674,8 @@ footer {
 
 @keyframes moonglow {
   from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: .5;
     -webkit-box-shadow: white 0px 0px 8px 2px;
             box-shadow: white 0px 0px 8px 2px;
@@ -678,6 +686,8 @@ footer {
             box-shadow: white 0px 0px 16px 2px;
   }
   50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     opacity: .5;
     -webkit-box-shadow: white 0px 0px 10px 2px;
             box-shadow: white 0px 0px 10px 2px;
@@ -688,6 +698,8 @@ footer {
             box-shadow: white 0px 0px 20px 2px;
   }
   100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: .5;
     -webkit-box-shadow: white 0px 0px 8px 2px;
             box-shadow: white 0px 0px 8px 2px;
