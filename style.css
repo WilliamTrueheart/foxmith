@@ -470,7 +470,8 @@ header h1 {
           animation-timing-function: cubic-bezier(0.69, 1, 0.22, 1);
 }
 
-#brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3 {
+#brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3,
+#brainBender_Container_4, #brainBender_Container_5, #brainBender_Container_6 {
   width: 650px;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -586,6 +587,78 @@ header h1 {
 
 #brainBenderTile_18 {
   background-image: url("bb18.PNG");
+}
+
+#brainBenderTile_19 {
+  background-image: url("bb19.PNG");
+}
+
+#brainBenderTile_20 {
+  background-image: url("bb20.PNG");
+}
+
+#brainBenderTile_21 {
+  background-image: url("bb21.PNG");
+}
+
+#brainBenderTile_22 {
+  background-image: url("bb22.PNG");
+}
+
+#brainBenderTile_23 {
+  background-image: url("bb23.PNG");
+}
+
+#brainBenderTile_24 {
+  background-image: url("bb24.PNG");
+}
+
+#brainBenderTile_25 {
+  background-image: url("bb25.PNG");
+}
+
+#brainBenderTile_26 {
+  background-image: url("bb26.PNG");
+}
+
+#brainBenderTile_27 {
+  background-image: url("bb27.PNG");
+}
+
+#brainBenderTile_28 {
+  background-image: url("bb28.PNG");
+}
+
+#brainBenderTile_29 {
+  background-image: url("bb29.PNG");
+}
+
+#brainBenderTile_30 {
+  background-image: url("bb30.PNG");
+}
+
+#brainBenderTile_31 {
+  background-image: url("bb31.PNG");
+}
+
+#brainBenderTile_32 {
+  background-image: url("bb32.PNG");
+}
+
+#brainBenderTile_33 {
+  background-image: url("bb33.PNG");
+}
+
+#brainBenderTile_34 {
+  background-image: url("bb34.PNG");
+}
+
+#brainBenderTile_35 {
+  background-image: url("bb35.PNG");
+}
+
+#brainBenderTile_36 {
+  background-image: url("bb36.PNG");
 }
 
 footer {
@@ -983,7 +1056,8 @@ footer {
   #vpLetterCode {
     font-size: .7rem;
   }
-  #brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3 {
+  #brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3,
+  #brainBender_Container_4, #brainBender_Container_5, #brainBender_Container_6 {
     width: 325px;
   }
 }
