@@ -84,8 +84,11 @@ header {
     width:100%;
     margin-top:6%;
     height:70vh;
-    background-color:$greyLight;
+    background: rgb(25,30,39);
+    background: linear-gradient(180deg, rgba(25,30,39,1) 0%, rgba(31,37,48,1) 50%);
     position: relative;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
 
     &::after {
@@ -99,6 +102,18 @@ header {
         background-size: 1440px;
         background-repeat: no-repeat;
     }
+}
+
+#moon {
+    position: fixed;
+    width:100px;
+    height:100px;
+    top:30%;
+    opacity: .5;
+    border-radius: 300px;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(227,254,255,1) 100%);
+    animation: moonglow 6s infinite;
 }
 
 #pageStickersContainer {
@@ -159,7 +174,7 @@ color:rgb(255, 255, 255);
     position: relative;
     align-items: center;
     justify-content: center;
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0 6rem 0;
     gap:2rem;
     overflow: hidden;
 }
@@ -318,11 +333,12 @@ color:rgb(255, 255, 255);
     width:100%;
     height:max-content;
     position: relative;
+    background-color: $greyLight;
     display:flex;
     flex-direction: column;
     align-items: center;
     gap:.5rem;
-    padding: 6rem 0 4rem 0;
+    padding: 6rem 0 6rem 0;
 
 
     &:before {
@@ -491,6 +507,29 @@ footer {
     }
     100% {
         font-size: 1.5rem;
+    }
+}
+
+@keyframes moonglow {
+    from {
+        opacity: .5;
+        box-shadow: white 0px 0px 8px 2px;
+    }
+    25% {
+        opacity: .3;
+        box-shadow: white 0px 0px 16px 2px;
+    }
+    50% {
+        opacity: .5;
+        box-shadow: white 0px 0px 10px 2px;
+    }
+    75% {
+        opacity: .7;
+        box-shadow: white 0px 0px 20px 2px;
+    }
+    100% {
+        opacity: .5;
+        box-shadow: white 0px 0px 8px 2px;
     }
 }
 
