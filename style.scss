@@ -221,6 +221,7 @@ color:rgb(255, 255, 255);
     animation: none;
 }
 
+
 .vpLetter {
     width:6.2vw;
     height: 6.2vw;
@@ -615,6 +616,15 @@ footer {
 // These are all of the media Queries
 
 @media only screen and (max-width: 500px) {
+
+    header {
+        width:100vw;
+        position: fixed;
+        top:0;
+        height:13%;
+        padding:10px 15vw 10px 10vw;
+    }
+
     #landingPage {
         &::after {
             content:'';
