@@ -1,4 +1,4 @@
-var completeMarker = '';
+
 
 // onScroll animation functions below
 
