@@ -287,14 +287,15 @@ header h1 {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+  border: solid rgba(106, 55, 55, 0);
   -webkit-box-shadow: 0px 0px 2px 1px darkgray;
           box-shadow: 0px 0px 2px 1px darkgray;
   z-index: 40;
 }
 
 .vpLetter:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
   background-color: #ededed;
   -webkit-animation: hoverLetter 1s;
           animation: hoverLetter 1s;
@@ -695,18 +696,30 @@ footer {
 
 @-webkit-keyframes hoverLetter {
   from {
+    -webkit-box-shadow: 0px 0px 3px 1px darkgray;
+            box-shadow: 0px 0px 3px 1px darkgray;
+    border: solid white 2px;
     font-size: 1rem;
   }
   100% {
+    -webkit-box-shadow: 0px 0px 5px 1px #29f1dd;
+            box-shadow: 0px 0px 5px 1px #29f1dd;
+    border: solid #3ad6f5 2px;
     font-size: 1.5rem;
   }
 }
 
 @keyframes hoverLetter {
   from {
+    -webkit-box-shadow: 0px 0px 3px 1px darkgray;
+            box-shadow: 0px 0px 3px 1px darkgray;
+    border: solid white 2px;
     font-size: 1rem;
   }
   100% {
+    -webkit-box-shadow: 0px 0px 5px 1px #29f1dd;
+            box-shadow: 0px 0px 5px 1px #29f1dd;
+    border: solid #3ad6f5 2px;
     font-size: 1.5rem;
   }
 }
