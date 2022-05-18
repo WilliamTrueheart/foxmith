@@ -627,8 +627,8 @@ header h1 {
   height: max-content;
   position: relative;
   background: #222834;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#222834), to(#333b4c));
-  background-image: linear-gradient(to bottom, #222834, #333b4c 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#222834), to(#2a303e));
+  background-image: linear-gradient(to bottom, #222834, #2a303e 100%);
   padding: 4rem 0 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
