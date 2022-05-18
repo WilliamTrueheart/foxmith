@@ -7,6 +7,10 @@ a:visited:hover, a:link:hover {
 }
 
 * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-family: 'Quicksand', sans-serif;
   padding: 0;
   margin: 0;
@@ -161,7 +165,7 @@ header h1 {
   top: 30%;
 }
 
-#vp_Title {
+.sectionTitle {
   font-size: 1.4rem;
   color: white;
 }
@@ -459,7 +463,7 @@ header h1 {
   position: relative;
   color: white;
   gap: 0vw;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .brainBenderTitle_Animation_Active {
@@ -660,6 +664,288 @@ header h1 {
 
 #brainBenderTile_36 {
   background-image: url("bb36.PNG");
+}
+
+#quoteWrapper {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  background: #191e27;
+  padding: 4rem 0 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#quoteUI {
+  height: 400px;
+  width: 50%;
+  background-color: #a5aebe;
+  position: relative;
+  border-radius: 16px;
+}
+
+#quoteLandingPage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #d3d9da;
+  padding: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#quoteLandingPage h3 {
+  font-size: 2rem;
+}
+
+#quoteLandingPage p {
+  font-size: 1.1rem;
+}
+
+#quoteLandingPage button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  position: relative;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  cursor: pointer;
+}
+
+#quoteLandingPage button:hover {
+  background-color: #20232a;
+  color: aqua;
+}
+
+#quoteLandingPage::before {
+  content: '';
+  width: 170px;
+  height: 170px;
+  border: solid 10px #191e27;
+  background-color: none;
+  position: absolute;
+  opacity: .4;
+  right: -50px;
+  bottom: -100px;
+  -webkit-animation: squareRotate 16s infinite;
+          animation: squareRotate 16s infinite;
+}
+
+#quoteLandingPage::after {
+  content: '';
+  width: 130px;
+  height: 130px;
+  opacity: .4;
+  border: solid 10px #191e27;
+  background-color: none;
+  position: absolute;
+  right: 50px;
+  bottom: -100px;
+  -webkit-animation: squareRotate 16s infinite;
+          animation: squareRotate 16s infinite;
+}
+
+.qMBall {
+  width: 40px;
+  height: 40px;
+  background-color: #191e27;
+  opacity: .2;
+  position: absolute;
+  bottom: 50px;
+  right: 140px;
+  -webkit-animation: qmBall 4s infinite;
+          animation: qmBall 4s infinite;
+}
+
+#quoteStartPage {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2%;
+  gap: 8%;
+  border-radius: 12px;
+}
+
+#resultPage {
+  width: 100%;
+  height: 100%;
+  background-color: #20232a;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#questionContainer {
+  height: 25%;
+  width: 90%;
+  background-color: #212a3e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 5%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #afe4de;
+}
+
+#answerContainer {
+  width: 90%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .6rem;
+}
+
+.answers {
+  width: 100%;
+  background-color: #212a3e;
+  padding: .2rem;
+}
+
+.answers:hover {
+  background-color: #2b3751;
+}
+
+#controlsContainer {
+  padding: .25rem 1rem;
+  background-color: #c58b1f;
+  color: black;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.unanswered {
+  background-color: #20232a;
+}
+
+.correct {
+  background-color: #14591b;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.incorrect {
+  background-color: #591414;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#score {
+  font-size: 1.2rem;
+}
+
+.fallingNumber {
+  position: absolute;
+  color: aqua;
+}
+
+#fallingNumber_1 {
+  font-size: 1.2rem;
+  left: 20%;
+  top: -10%;
+  -webkit-animation: fallingNumber 3.5s .4s infinite;
+          animation: fallingNumber 3.5s .4s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+#fallingNumber_2 {
+  font-size: 1rem;
+  left: 40%;
+  top: -10%;
+  color: #04baba;
+  -webkit-animation: fallingNumber 3s .2s infinite;
+          animation: fallingNumber 3s .2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+#fallingNumber_3 {
+  font-size: 1.4rem;
+  left: 60%;
+  top: -10%;
+  -webkit-animation: fallingNumber 4s .3s infinite;
+          animation: fallingNumber 4s .3s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+#fallingNumber_4 {
+  font-size: 1.3rem;
+  left: 80%;
+  top: -10%;
+  color: #04baba;
+  -webkit-animation: fallingNumber 3s .2s infinite;
+          animation: fallingNumber 3s .2s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 footer {
@@ -1000,6 +1286,82 @@ footer {
   }
 }
 
+@-webkit-keyframes fallingNumber {
+  from {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: -10%;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    top: 120%;
+  }
+}
+
+@keyframes fallingNumber {
+  from {
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: -10%;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    top: 120%;
+  }
+}
+
+@-webkit-keyframes qmBall {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    bottom: 50px;
+  }
+  25% {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    bottom: 150px;
+  }
+  90% {
+    border-radius: 0%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    bottom: 50px;
+  }
+}
+
+@keyframes qmBall {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    bottom: 50px;
+  }
+  25% {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 50%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    bottom: 150px;
+  }
+  90% {
+    border-radius: 0%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    bottom: 50px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   header {
     width: 100vw;
@@ -1072,6 +1434,29 @@ footer {
   #brainBender_Container_1, #brainBender_Container_2, #brainBender_Container_3,
   #brainBender_Container_4, #brainBender_Container_5, #brainBender_Container_6 {
     width: 325px;
+  }
+  #quoteUI {
+    height: 300px;
+    width: 80%;
+    background-color: #505b6f;
+  }
+  #score {
+    font-size: 1rem;
+  }
+  #quoteLandingPage::before {
+    content: '';
+    width: 140px;
+    height: 140px;
+  }
+  #quoteLandingPage::after {
+    content: '';
+    width: 110px;
+    height: 110px;
+  }
+  .qMBall {
+    opacity: .05;
+    right: 130px;
+    bottom: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

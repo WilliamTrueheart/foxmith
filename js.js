@@ -220,3 +220,200 @@ function reveal() {
 }
 
 
+// QUOTE MATCH GAME console.log(score,queue,currentQuestion)
+let currentQuestion = 1;
+let score = 0;
+let queue = 1;
+let controlsContainer = document.getElementById('controlsContainer');
+let questionContainer = document.getElementById('questionContainer');
+
+function startGame() {
+    let startGameLanding = document.getElementById('quoteStartPage');
+    let questionContainer = document.getElementById('questionContainer');
+    let answerA = document.getElementById('answerA');
+    let answerB = document.getElementById('answerB');
+    let answerC = document.getElementById('answerC');
+    let answerD = document.getElementById('answerD');
+
+    startGameLanding.style.display = 'flex';
+    questionContainer.innerText = myQuestions[0].question;
+    answerA.innerText = myQuestions[0].answers.a;
+    answerB.innerText = myQuestions[0].answers.b;
+    answerC.innerText = myQuestions[0].answers.c;
+    answerD.innerText = myQuestions[0].answers.d;
+}
+
+function loadNextQuestion() {
+  let questionContainer = document.getElementById('questionContainer');
+  let answerA = document.getElementById('answerA');
+  let quoteStartPage = document.getElementById('quoteStartPage');
+  currentQuestion += 1;
+  let answerB = document.getElementById('answerB');
+  let answerC = document.getElementById('answerC');
+  let answerD = document.getElementById('answerD');
+  let resultPage = document.getElementById('resultPage');
+  let scoreDisplay = document.getElementById('score');
+  let fn1 = document.getElementById('fallingNumber_1');
+  let fn2 = document.getElementById('fallingNumber_2');
+  let fn3 = document.getElementById('fallingNumber_3');
+  let fn4 = document.getElementById('fallingNumber_4');
+
+
+  if (currentQuestion == 2) {
+    quoteStartPage.classList.remove('correct')
+    quoteStartPage.classList.remove('incorrect')
+    questionContainer.innerText = myQuestions[1].question;
+    answerA.innerText = myQuestions[1].answers.a;
+    answerB.innerText = myQuestions[1].answers.b;
+    answerC.innerText = myQuestions[1].answers.c;
+    answerD.innerText = myQuestions[1].answers.d;
+    quoteStartPage.style.backgroundColor = '';
+  }
+  else if (currentQuestion == 3) {
+    quoteStartPage.classList.remove('correct')
+    quoteStartPage.classList.remove('incorrect')
+    questionContainer.innerText = myQuestions[2].question;
+    answerA.innerText = myQuestions[2].answers.a;
+    answerB.innerText = myQuestions[2].answers.b;
+    answerC.innerText = myQuestions[2].answers.c;
+    answerD.innerText = myQuestions[2].answers.d;
+    quoteStartPage.style.backgroundColor = '';
+  }
+  else if (currentQuestion == 4) {
+    quoteStartPage.classList.remove('correct')
+    quoteStartPage.classList.remove('incorrect')
+    questionContainer.innerText = myQuestions[3].question;
+    answerA.innerText = myQuestions[3].answers.a;
+    answerB.innerText = myQuestions[3].answers.b;
+    answerC.innerText = myQuestions[3].answers.c;
+    answerD.innerText = myQuestions[3].answers.d;
+    quoteStartPage.style.backgroundColor = '';
+  }
+  else if (currentQuestion == 5) {
+    quoteStartPage.classList.remove('correct')
+    quoteStartPage.classList.remove('incorrect')
+    questionContainer.innerText = myQuestions[4].question;
+    answerA.innerText = myQuestions[4].answers.a;
+    answerB.innerText = myQuestions[4].answers.b;
+    answerC.innerText = myQuestions[4].answers.c;
+    answerD.innerText = myQuestions[4].answers.d;
+    quoteStartPage.style.backgroundColor = '';
+  }
+  else if (currentQuestion == 6) {
+    resultPage.style.display = 'flex';
+    scoreDisplay.innerText = 'You got ' + score + ' out of 5 correct!'
+    quoteStartPage.classList.remove('correct');
+    quoteStartPage.classList.remove('incorrect');  
+    fn1.innerText = score;
+    fn2.innerText = score;
+    fn3.innerText = score;
+    fn4.innerText = score;
+  }
+}
+
+function selectAnswer(String) {
+
+  let quoteStartPage = document.getElementById('quoteStartPage');
+
+  if (currentQuestion == 1 && queue == 1 && String == myQuestions[0].correctAnswer) {
+      quoteStartPage.classList.add('correct')
+      score += 1;
+      queue += 1;
+  }
+  else if (currentQuestion == 1 && queue == 1 && String !== myQuestions[0].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
+  else if (currentQuestion == 2 && queue == 2 && String == myQuestions[1].correctAnswer) {
+    quoteStartPage.classList.add('correct')
+    score += 1;
+    queue += 1;
+  }
+  else if (currentQuestion == 2 && queue == 2 && String !== myQuestions[1].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
+  else if (currentQuestion == 3 && queue == 3 && String == myQuestions[2].correctAnswer) {
+    quoteStartPage.classList.add('correct')
+    queue += 1;
+    score += 1;
+  }
+  else if (currentQuestion == 3 && queue == 3 && String !== myQuestions[2].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
+  else if (currentQuestion == 4 && queue == 4 && String == myQuestions[3].correctAnswer) {
+    quoteStartPage.classList.add('correct')
+    queue += 1;
+    score += 1;
+  }
+  else if (currentQuestion == 4 && queue == 4 && String !== myQuestions[3].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
+  else if (currentQuestion == 5 && queue == 5 && String == myQuestions[4].correctAnswer) {
+    quoteStartPage.classList.add('correct')
+    queue += 1;
+    score += 1;
+  }
+  else if (currentQuestion == 5 && queue == 5 && String !== myQuestions[4].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
+}
+
+
+
+
+let myQuestions = [
+{
+  question: "It's not what you look at that matters, it's what you see.",
+  answers: {
+    a: 'Henry David Thoreau',
+    b: 'Nelson Mandela',
+    c: 'Vincent Van Gogh',
+    d: 'Mother Teresa'
+  },
+  correctAnswer:'a'
+},
+{
+  question: "If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.",
+  answers: {
+    a: 'Thomas Edison',
+    b: 'Franklin D. Roosevelt',
+    c: 'Martin Luther King Jr',
+    d: 'Walt Disney'
+  },
+  correctAnswer:'c'
+},
+{
+  question: "You gotta keep on keepin/' on. Life’s a garden: dig it. You gotta make it work for you.",
+  answers: {
+    a: 'Forrest Gump',
+    b: 'Joe Dirt',
+    c: 'Kanye West',
+    d: 'Donald Trump'
+  },
+  correctAnswer:'b'
+},
+{
+  question: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic. Capable of both inflicting injury, and remedying it.",
+  answers: {
+    a: 'Draco Malfoy',
+    b: 'Albus Dumbledore',
+    c: 'Hermione Granger',
+    d: 'Harry Potter'
+  },
+  correctAnswer:'b'
+},
+{
+  question: "You miss 100% of the shots you don't take.",
+  answers: {
+    a: 'Wayne Gretzky',
+    b: 'Ron Swanson',
+    c: 'Michael Scott',
+    d: 'A & C'
+  },
+  correctAnswer:'d'
+}
+]

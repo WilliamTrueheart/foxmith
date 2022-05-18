@@ -19,6 +19,7 @@ a:visited, a:link {
 }
 
 * {
+    user-select: none;
     font-family: 'Quicksand', sans-serif;
     padding:0; margin:0;
     box-sizing: border-box;
@@ -150,7 +151,7 @@ header {
     top:30%;
 }
 
-#vp_Title {
+.sectionTitle {
 font-size: 1.4rem;
 color:rgb(255, 255, 255);
 }
@@ -357,7 +358,7 @@ color:rgb(255, 255, 255);
     position: relative;
     color:white;
     gap:0vw;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .brainBenderTitle_Animation_Active {
@@ -515,6 +516,228 @@ color:rgb(255, 255, 255);
     background-image: url('bb36.PNG');
 }
 
+// start of QUOTE Wrapper 
+
+#quoteWrapper {
+    width:100%;
+    height:max-content;
+    position: relative;
+    background: rgb(25,30,39);
+    padding: 4rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center; justify-content: center;
+}
+
+#quoteUI {
+    height:400px;
+    width:50%;
+    background-color: rgb(165, 174, 190);
+    position: relative;
+    border-radius: 16px;
+}
+
+#quoteLandingPage {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background-color: rgb(211, 217, 218);
+    padding:10%;
+    display: flex;
+    flex-direction: column;
+    gap:15%;
+    border-radius: 16px;
+    overflow: hidden;
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+    
+    button {
+        width:max-content;
+        padding:.5rem 1rem;
+        border-radius: 4px;
+        border:none;
+        position: relative;
+        transition-duration: .5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #20232a;
+            color:aqua;
+    
+        }
+    }
+}
+
+// below are the moving sqaures on the bottom right of QuoteMatch
+
+#quoteLandingPage::before {
+    content:'';
+    width:170px;
+    height:170px;
+    border: solid 10px #191e27;
+    background-color: none;
+    position: absolute;
+    opacity: .4;
+    right:-50px;
+    bottom:-100px;
+    animation: squareRotate 16s infinite;
+}
+#quoteLandingPage::after {
+    content:'';
+    width:130px;
+    height:130px;
+    opacity: .4;
+    border: solid 10px #191e27;
+    background-color: none;
+    position: absolute;
+    right:50px;
+    bottom:-100px;
+    animation: squareRotate 16s infinite ;
+}
+
+.qMBall {
+    width:40px;
+    height:40px;
+    background-color: #191e27;
+    opacity: .2;
+    position: absolute;
+    bottom:50px;
+    right: 140px;
+    animation: qmBall 4s infinite;
+}
+
+//start of Match Game ACTIVE 
+
+#quoteStartPage {
+width:100%;
+height:100%;
+color:white;
+display: none; // toggle to work on game
+flex-direction: column;
+position: absolute;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding:2%;
+gap:8%;
+border-radius: 12px;
+}
+
+#resultPage {
+    width:100%;
+    height:100%;
+    background-color: #20232a;
+    color:white;
+    position: absolute;
+    overflow: hidden;
+    display:none; // 
+    flex-direction: column;
+    gap:5%;
+    align-items: center;
+    justify-content: center;
+}
+
+#questionContainer {
+    height:25%;
+    width:90%;
+    background-color: #212a3e;
+    display:flex;
+    position: relative;
+    padding:5%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color:rgb(175, 228, 222);
+}
+
+#answerContainer {
+    width:90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:.6rem;
+}
+
+.answers {
+    width:100%;
+    background-color: #212a3e;
+    padding:.2rem;
+    &:hover {
+        background-color: #2b3751;
+    }
+}
+
+#controlsContainer {
+    padding: .25rem 1rem;
+    background-color: rgb(197, 139, 31);
+    color:black;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none
+}
+
+.unanswered {
+    background-color: #20232a;
+}
+
+.correct {
+    background-color: #14591b;
+    transition: 1s;
+}
+.incorrect {
+    background-color: #591414;
+    transition: 1s;
+}
+
+#score {
+    font-size: 1.2rem;
+}
+
+.fallingNumber {
+    position: absolute;
+    color:aqua;
+}
+
+#fallingNumber_1 {
+    font-size:1.2rem;
+    left: 20%;
+    top:-10%;
+    animation: fallingNumber 3.5s .4s infinite;
+    animation-timing-function: linear;
+}
+#fallingNumber_2 {
+    font-size:1rem;
+    left: 40%;
+    top:-10%;
+    color:rgb(4, 186, 186);
+    animation: fallingNumber 3s .2s infinite;
+    animation-timing-function: linear;
+}
+#fallingNumber_3 {
+    font-size:1.4rem;
+    left: 60%;
+    top:-10%;
+    animation: fallingNumber 4s .3s infinite;
+    animation-timing-function: linear;
+}
+#fallingNumber_4 {
+    font-size:1.3rem;
+    left: 80%;
+    top:-10%;
+    color:rgb(4, 186, 186);
+    animation: fallingNumber 3s .2s infinite;
+    animation-timing-function: linear;
+}
+
+// Start of Footer
 
 footer {
     width:100vw;
@@ -673,6 +896,36 @@ footer {
     }
 }
 
+@keyframes fallingNumber {
+    from {
+        opacity:1;
+        transform: rotate(0deg);
+        top:-10%;
+    }
+
+    100% {
+        opacity:0;
+        transform: rotate(180deg);
+        top:120%;
+    }
+}
+
+@keyframes qmBall {
+    from {
+        transform: rotate(0deg);
+        bottom:50px;
+    }
+    25% {border-radius: 50%;}
+    50% {border-radius: 50%;
+        transform: rotate(90deg);
+        bottom:150px;
+    }
+    90% {
+        border-radius: 0%;
+        transform: rotate(180deg);
+        bottom:50px;
+    }
+}
 
 
 
@@ -752,5 +1005,30 @@ footer {
     #brainBender_Container_1,#brainBender_Container_2,#brainBender_Container_3,
     #brainBender_Container_4,#brainBender_Container_5,#brainBender_Container_6  {
         width:325px;
+    }
+    #quoteUI {
+        height:300px;
+        width:80%;
+        background-color: rgb(80, 91, 111);
+    }
+
+    #score {
+        font-size: 1rem;
+    }
+
+    #quoteLandingPage::before {
+        content:'';
+        width:140px;
+        height:140px;
+    }
+    #quoteLandingPage::after {
+        content:'';
+        width:110px;
+        height:110px;
+    }
+    .qMBall {
+        opacity: .05;
+        right:130px;
+        bottom:50px;
     }
 }
