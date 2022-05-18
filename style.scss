@@ -379,6 +379,7 @@ color:rgb(255, 255, 255);
     padding:10px 5px 10px 5px;
     border-radius: 8px;
     gap:5px;
+    box-shadow: rgba(159, 173, 182, 0.23) 0px 0px 5px 1px;
 }
 
 
@@ -487,7 +488,8 @@ color:rgb(255, 255, 255);
     width:100%;
     height:max-content;
     position: relative;
-    background: rgb(25,30,39);
+    background: #222834;
+    background-image: linear-gradient(to bottom, #222834, #333b4c 100%);
     padding: 4rem 0 4rem 0;
     display: flex;
     flex-direction: column;
@@ -977,7 +979,7 @@ footer {
         width:325px;
     }
     #quoteUI {
-        width:80%;
+        width:90%;
         background-color: rgb(80, 91, 111);
     }
 
@@ -997,7 +999,7 @@ footer {
     }
     .qMBall {
         opacity: .05;
-        right:130px;
+        right:135px;
         bottom:50px;
     }
 }
