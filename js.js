@@ -234,6 +234,7 @@ function startGame() {
     let answerB = document.getElementById('answerB');
     let answerC = document.getElementById('answerC');
     let answerD = document.getElementById('answerD');
+    let currentQuestionContainer = document.getElementById('currentQuestionContainer');
 
     startGameLanding.style.display = 'flex';
     questionContainer.innerText = myQuestions[0].question;
@@ -241,6 +242,7 @@ function startGame() {
     answerB.innerText = myQuestions[0].answers.b;
     answerC.innerText = myQuestions[0].answers.c;
     answerD.innerText = myQuestions[0].answers.d;
+    currentQuestionContainer.innerText = 'question 1/7';
 }
 
 function loadNextQuestion() {
@@ -257,7 +259,7 @@ function loadNextQuestion() {
   let fn2 = document.getElementById('fallingNumber_2');
   let fn3 = document.getElementById('fallingNumber_3');
   let fn4 = document.getElementById('fallingNumber_4');
-
+  let currentQuestionContainer = document.getElementById('currentQuestionContainer');
 
   if (currentQuestion == 2) {
     quoteStartPage.classList.remove('correct')
@@ -268,6 +270,7 @@ function loadNextQuestion() {
     answerC.innerText = myQuestions[1].answers.c;
     answerD.innerText = myQuestions[1].answers.d;
     quoteStartPage.style.backgroundColor = '';
+    currentQuestionContainer.innerText = 'question 2/7'
   }
   else if (currentQuestion == 3) {
     quoteStartPage.classList.remove('correct')
@@ -278,6 +281,7 @@ function loadNextQuestion() {
     answerC.innerText = myQuestions[2].answers.c;
     answerD.innerText = myQuestions[2].answers.d;
     quoteStartPage.style.backgroundColor = '';
+    currentQuestionContainer.innerText = 'question 3/7'
   }
   else if (currentQuestion == 4) {
     quoteStartPage.classList.remove('correct')
@@ -288,6 +292,7 @@ function loadNextQuestion() {
     answerC.innerText = myQuestions[3].answers.c;
     answerD.innerText = myQuestions[3].answers.d;
     quoteStartPage.style.backgroundColor = '';
+    currentQuestionContainer.innerText = 'question 4/6'
   }
   else if (currentQuestion == 5) {
     quoteStartPage.classList.remove('correct')
@@ -298,10 +303,33 @@ function loadNextQuestion() {
     answerC.innerText = myQuestions[4].answers.c;
     answerD.innerText = myQuestions[4].answers.d;
     quoteStartPage.style.backgroundColor = '';
+    currentQuestionContainer.innerText = 'question 5/7'
   }
   else if (currentQuestion == 6) {
+    quoteStartPage.classList.remove('correct')
+    quoteStartPage.classList.remove('incorrect')
+    questionContainer.innerText = myQuestions[5].question;
+    answerA.innerText = myQuestions[5].answers.a;
+    answerB.innerText = myQuestions[5].answers.b;
+    answerC.innerText = myQuestions[5].answers.c;
+    answerD.innerText = myQuestions[5].answers.d;
+    quoteStartPage.style.backgroundColor = '';
+    currentQuestionContainer.innerText = 'question 6/7'
+  }
+  else if (currentQuestion == 7) {
+    quoteStartPage.classList.remove('correct')
+    quoteStartPage.classList.remove('incorrect')
+    questionContainer.innerText = myQuestions[6].question;
+    answerA.innerText = myQuestions[6].answers.a;
+    answerB.innerText = myQuestions[6].answers.b;
+    answerC.innerText = myQuestions[6].answers.c;
+    answerD.innerText = myQuestions[6].answers.d;
+    quoteStartPage.style.backgroundColor = '';
+    currentQuestionContainer.innerText = 'question 6/7'
+  }
+  else if (currentQuestion == 8) {
     resultPage.style.display = 'flex';
-    scoreDisplay.innerText = 'You got ' + score + ' out of 5 correct!'
+    scoreDisplay.innerText = 'You got ' + score + ' out of 7 correct!'
     quoteStartPage.classList.remove('correct');
     quoteStartPage.classList.remove('incorrect');  
     fn1.innerText = score;
@@ -360,6 +388,24 @@ function selectAnswer(String) {
     quoteStartPage.classList.add('incorrect')
     queue += 1;
   }
+  else if (currentQuestion == 6 && queue == 6 && String == myQuestions[5].correctAnswer) {
+    quoteStartPage.classList.add('correct')
+    queue += 1;
+    score += 1;
+  }
+  else if (currentQuestion == 6 && queue == 6 && String !== myQuestions[5].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
+  else if (currentQuestion == 7 && queue == 7 && String == myQuestions[6].correctAnswer) {
+    quoteStartPage.classList.add('correct')
+    queue += 1;
+    score += 1;
+  }
+  else if (currentQuestion == 7 && queue == 7 && String !== myQuestions[6].correctAnswer) {
+    quoteStartPage.classList.add('incorrect')
+    queue += 1;
+  }
 }
 
 
@@ -415,5 +461,25 @@ let myQuestions = [
     d: 'A & C'
   },
   correctAnswer:'d'
+},
+{
+  question: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+  answers: {
+    a: 'Albert Einstein',
+    b: 'Lance Armstrong',
+    c: 'Barack Obama',
+    d: 'Phil Collins'
+  },
+  correctAnswer:'a'
+},
+{
+  question: "Be the change you wish to see in the world.",
+  answers: {
+    a: 'George Washington',
+    b: 'John Lennon',
+    c: 'Mahatma Gandhi',
+    d: 'Rosa Parks'
+  },
+  correctAnswer:'c'
 }
 ]
