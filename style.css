@@ -75,6 +75,28 @@ header h1 {
   cursor: pointer;
 }
 
+.star {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  opacity: .5;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: white 0px 0px 6px 1px;
+          box-shadow: white 0px 0px 6px 1px;
+}
+
+#star1 {
+  top: 60%;
+  left: 30%;
+}
+
+#star2 {
+  top: 35%;
+  right: 25%;
+}
+
 #landingPage {
   width: 100%;
   margin-top: 6%;
@@ -308,15 +330,15 @@ header h1 {
 }
 
 .vpLetterR1 {
-  background-color: #98c3ce;
+  background-color: #d3e2e9;
 }
 
 .vpLetterR2 {
-  background-color: #bddfe6;
+  background-color: #e6f0f5;
 }
 
 .vpLetterR3 {
-  background-color: #cae8f0;
+  background-color: white;
 }
 
 .reveal {
@@ -501,7 +523,7 @@ header h1 {
 .brainBenderTile {
   height: 100px;
   width: 100px;
-  background-color: #cceded;
+  background-color: #d3e2e9;
   background-size: contain;
   position: relative;
   background-repeat: no-repeat;
@@ -629,7 +651,7 @@ header h1 {
   background: #222834;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#222834), to(#2a303e));
   background-image: linear-gradient(to bottom, #222834, #2a303e 100%);
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0 6rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -913,6 +935,7 @@ footer {
   width: 100vw;
   height: 120px;
   background-color: #20232a;
+  z-index: 15;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

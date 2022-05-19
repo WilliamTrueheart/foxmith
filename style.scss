@@ -9,6 +9,9 @@ $darkIcons: rgb(53, 61, 77);
 $lightIcons: rgb(69, 77, 98);
 $extralightIcons: grey;
 
+$vp1:rgb(211, 226, 233);
+$vp2:rgb(230, 240, 245);
+$vp3:white;
 
 a:visited, a:link {
     color:white;
@@ -70,6 +73,23 @@ header {
     }
 }
 
+.star {
+    width:2px;
+    height:2px;
+    background-color:rgb(255, 255, 255) ;
+    position: absolute;
+    opacity: .5;
+    transform: rotate(45deg);
+    box-shadow: white 0px 0px 6px 1px;
+}
+#star1 {
+    top:60%;
+    left:30%;
+}
+#star2 {
+    top:35%;
+    right:25%;
+}
 
 
 #landingPage {
@@ -247,13 +267,13 @@ color:rgb(255, 255, 255);
 
 }
 .vpLetterR1 {
-    background-color: $blueIceDark;
+    background-color: $vp1;
 }
 .vpLetterR2 {
-    background-color: $blueIceMed;
+    background-color: $vp2;
 }
 .vpLetterR3 {
-    background-color: $blueIceLight;
+    background-color: $vp3;
 }
 
 .reveal{
@@ -387,7 +407,7 @@ color:rgb(255, 255, 255);
 .brainBenderTile {
     height:100px;
     width:100px;
-    background-color: rgb(204, 237, 237);
+    background-color: $vp1;
     background-size: contain;
     position: relative;
     background-repeat: no-repeat;
@@ -490,7 +510,7 @@ color:rgb(255, 255, 255);
     position: relative;
     background: #222834;
     background-image: linear-gradient(to bottom, #222834, #2a303e 100%);
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0 6rem 0;
     display: flex;
     flex-direction: column;
     gap:2rem;
@@ -715,6 +735,7 @@ footer {
     width:100vw;
     height:120px;
     background-color: $greyMedium;
+    z-index: 15;
     display: flex;
     font-size: .6rem;
     align-items: center;
