@@ -292,7 +292,7 @@ function loadNextQuestion() {
     answerC.innerText = myQuestions[3].answers.c;
     answerD.innerText = myQuestions[3].answers.d;
     quoteStartPage.style.backgroundColor = '';
-    currentQuestionContainer.innerText = 'question 4/6'
+    currentQuestionContainer.innerText = 'question 4/7'
   }
   else if (currentQuestion == 5) {
     quoteStartPage.classList.remove('correct')
@@ -325,7 +325,7 @@ function loadNextQuestion() {
     answerC.innerText = myQuestions[6].answers.c;
     answerD.innerText = myQuestions[6].answers.d;
     quoteStartPage.style.backgroundColor = '';
-    currentQuestionContainer.innerText = 'question 6/7'
+    currentQuestionContainer.innerText = 'question 7/7'
   }
   else if (currentQuestion == 8) {
     resultPage.style.display = 'flex';
