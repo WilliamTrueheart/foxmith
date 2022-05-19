@@ -433,7 +433,7 @@ let myQuestions = [
   correctAnswer:'c'
 },
 {
-  question: "You gotta keep on keepin/' on. Life’s a garden: dig it. You gotta make it work for you.",
+  question: "You gotta keep on keepin' on. Life's a garden, dig it. You gotta make it work for you.",
   answers: {
     a: 'Forrest Gump',
     b: 'Joe Dirt',

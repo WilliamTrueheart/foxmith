@@ -924,6 +924,12 @@ footer {
 
 
 // These are all of the media Queries
+@media only screen and (max-width: 800px) {
+    #topNav {
+        display: none;
+    }
+}
+
 
 @media only screen and (max-width: 500px) {
 
